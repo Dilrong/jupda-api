@@ -24,16 +24,18 @@ import { ConfigModule, ConfigService } from '../config';
         }
         return {
           type: 'mongodb',
-          host: configService.get('DB_HOST'),
-          username: configService.get('DB_USERNAME'),
-          passport: configService.get('DB_PASSWORD'),
-          database: configService.get('DB_DATABASE'),
+          url: `mongodb+srv://${configService.get(
+            'DB_USERNAME',
+          )}:${configService.get('DB_PASSWORD')}@${configService.get(
+            'DB_HOST',
+          )}/${configService.get('DB_DATABASE')}?retryWrites=true&w=majority`,
           port: 27017,
-          dropSchema: false,
-          synchronize: false,
+          synchronize: true,
           logger: false,
           entities: [__dirname + './../**/**.entity{.ts,.js}'],
           keepConnectionAlive: true,
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
         } as TypeOrmModuleAsyncOptions;
       },
     }),
