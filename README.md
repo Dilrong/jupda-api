@@ -1,4 +1,6 @@
-# Coffering API
+# Jupda API
+
+> Let's pick up coins with "Jupda(줍다)"!
 
 Hello, block chain developer🧑🏻‍💻 and bitcoin Investor🤑.
 
@@ -33,7 +35,7 @@ APP_ENV=dev
 APP_URL=http://localhost
 
 #JWT AUTH
-JWT_EXPIRATION_TIME=3600
+JWT_SECRET_KEY=
 
 #DATABASE
 DB_USERNAME=
