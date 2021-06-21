@@ -1,4 +1,6 @@
-# Coffering API
+# Jupda API
+
+> Let's pick up coins with "Jupda(줍다)"!
 
 Hello, block chain developer🧑🏻‍💻 and bitcoin Investor🤑.
 
